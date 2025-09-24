@@ -14,6 +14,8 @@ int main(void) {
     push_list(foo, 45);
     push_list(foo, 46);
 
+    int wat = pop_list(foo);
+
     printf("Nu printer vi listen...\n");
     struct list_t *current = foo;
     while (current != NULL) {
@@ -22,10 +24,16 @@ int main(void) {
     }
     printf("SLUT!\n");
 
-    int wat = pop_list(foo);
     printf("wat er %d\n", wat);
 
-    // Heap-allokeret liste kalder malloc()
 
+    // Heap-allokeret liste kalder malloc()
+/*
+    printf("Nu printer vi listen...\n");
+    current = foo;
+    while (current != NULL) {
+        printf("%d -> ", current->value);
+        current = current->next;
+    }*/
     return 0;
 }

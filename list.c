@@ -31,4 +31,26 @@ void push_list(struct list_t *list, int value) {
 
 int pop_list(struct list_t *list) {
     // TODO: Lav mig!
+
+    struct list_t *prev = list;
+    struct list_t *current = list->next;
+
+    if (prev == NULL) {
+        return -1;
+    }
+
+    while (current->next != NULL) {
+        prev = current;
+        current = current->next;
+    }
+
+    int data = current->value;
+
+    //remove reference from new tail.
+    prev->next = NULL;
+
+    //Deallocate link
+    free(current->next);
+
+    return data;
 }

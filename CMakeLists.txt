@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 23)
 
 add_executable(linklist main.c
         list.c
-        list.h)
+        list.h
+        people.c
+        people.h)
