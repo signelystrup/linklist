@@ -7,7 +7,7 @@ struct list_t {
     int value;
 };
 
-struct list_t make_list(int);
+struct list_t *make_list(int);
 void push_list(struct list_t, int);
 int pop_list(struct list_t);
 
