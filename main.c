@@ -12,6 +12,15 @@ int main(void) {
     baz.next = NULL;
 
     push_list(foo, 45);
+    push_list(foo, 46);
+
+    printf("Nu printer vi listen...\n");
+    struct list_t *current = &foo;
+    while (current->next != NULL) {
+        printf("%d -> ", current->value);
+        current = current->next;
+    }
+    printf("SLUT!\n");
 
     // Heap-allokeret liste kalder malloc()
 
