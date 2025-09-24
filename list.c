@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "list.h"
 
-
 struct list_t *make_list(int value) {
     // Problem: Det her kæde-led er stak-allokeret, og lever ikke længe nok
     // struct list_t new;
@@ -18,18 +17,18 @@ struct list_t *make_list(int value) {
     return new;
 }
 
-void push_list(struct list_t list, int value) {
-    struct list_t *current = &list;
+void push_list(struct list_t *list, int value) {
+    struct list_t *current = list;
     while (current->next != NULL) {
         current = current->next;
     }
 
-    struct list_t new = make_list(value);
+    struct list_t *new = make_list(value);
     // struct list_t *new_pointer = &new;
     // struct list_t new_again = *new_pointer;
-    current->next = &new;
+    current->next = new;
 }
 
-int pop_list(struct list_t list) {
+int pop_list(struct list_t *list) {
 
 }
