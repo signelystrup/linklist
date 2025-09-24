@@ -22,6 +22,9 @@ int main(void) {
     }
     printf("SLUT!\n");
 
+    int wat = pop_list(foo);
+    printf("wat er %d\n", wat);
+
     // Heap-allokeret liste kalder malloc()
 
     return 0;

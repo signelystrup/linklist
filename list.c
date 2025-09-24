@@ -30,5 +30,5 @@ void push_list(struct list_t *list, int value) {
 }
 
 int pop_list(struct list_t *list) {
-
+    // TODO: Lav mig!
 }
